@@ -1,0 +1,13 @@
+@media screen and (max-width:1025px) {
+    .login-container {
+        flex-direction: column-reverse;
+    }
+
+    .left-side-content {
+        width: 100%;
+    }
+
+    .right-side-content {
+        width: 100%;
+    }
+}
