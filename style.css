@@ -331,6 +331,11 @@ div.input-container input:focus+span.placeholder {
     border-radius: 1rem;
     margin-top: 9rem;
 }
-
-
+.right-second-video{
+    width: 100%;
+}
+.video{
+    width: 100%;
+    border: .2rem solid gold;
+}
 
