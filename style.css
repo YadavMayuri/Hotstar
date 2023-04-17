@@ -258,7 +258,7 @@ div.input-container input:focus+span.placeholder {
 
 .nav-link>a {
     font-size: 1.6rem;
-    color: gray;
+    color: #949496;
     text-decoration: none;
 }
 
@@ -291,7 +291,8 @@ div.input-container input:focus+span.placeholder {
 .h-sub-desc {
     width: 49%;
     /* border: .1rem solid green; */
-    background-color: #16181f;padding: 2rem;
+    background-color: #16181f;
+    padding: 2rem;
 
 }
 
@@ -360,10 +361,12 @@ div.input-container input:focus+span.placeholder {
 
 .video {
     width: 100%;
+    height: 116vh;
     border: .2rem solid gold;
     position: relative;
 }
-.video-info{
+
+.video-info {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -371,20 +374,23 @@ div.input-container input:focus+span.placeholder {
     border: .2rem solid red;
     position: absolute;
     padding: 0rem 18rem 5rem 10rem;
-    margin-top: -40rem;
+    margin-top: -48rem;
 }
-.video-info-left-side{
+
+.video-info-left-side {
     width: 45%;
     border: .1rem solid yellowgreen;
     display: flex;
     flex-direction: column;
 }
-.video-info-right-side{
+
+.video-info-right-side {
     width: 45%;
     border: .1rem solid yellowgreen;
-    
+
 }
-.v-left-top{
+
+.v-left-top {
     border: .1rem solid palevioletred;
     width: 98%;
     margin: auto;
@@ -394,67 +400,96 @@ div.input-container input:focus+span.placeholder {
     color: white;
 
 }
-.v-left-bottom{
+
+.v-left-bottom {
     border: .1rem solid palevioletred;
     width: 98%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+
+
 }
-.v-watch-now-btn{
+
+.v-watch-now-btn {
     width: 80%;
     border: .1rem solid yellow;
-    
+
+
 }
-.v-watchlist-btn{
+
+.v-watchlist-btn {
     width: 10%;
     border: .1rem solid yellow;
 }
-.v-watchlist-btn>button{
+
+.v-watchlist-btn>button {
     width: 100%;
     padding: 1rem;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    color: white;
 
 }
-.v-watchlist-btn>button>span>i{
-    color: orange;
+
+.v-watchlist-btn>button>span>i {
+    color: white;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: .04rem;
 }
 
-.v-watch-now-btn>a>button{
+.v-watch-now-btn>a>button {
     width: 100%;
-    color: orange;
+    color: white;
     padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+
 }
-.v-watch-now-btn>a>button>span{
-    color: orange;
-    padding:  0rem .4rem;
+
+.v-watch-now-btn>a>button>span {
+    color: white;
+    padding: 0rem .4rem;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: .04rem;
     cursor: pointer;
-
 }
-.v-watch-now-btn>a>button{
+
+.v-watch-now-btn>a>button {
     cursor: pointer;
 }
-.v-season-ep-info{
+
+.v-season-ep-info {
     width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1.8rem;
+
 }
-.v-season-ep-info>span{
+
+.v-season-ep-info>span {
     color: white;
     font-size: 1.6rem;
     letter-spacing: .02rem;
     font-weight: 600;
 
 }
-.v-gener{
+
+.restriction {
+    background: rgba(255, 255, 255, 0.1);
+    padding: .6rem;
+    text-align: center;
+    border-radius: .5rem;
+
+}
+
+.v-gener {
     display: flex;
     justify-content: space-between;
     /* gap: 2rem; */
@@ -462,7 +497,8 @@ div.input-container input:focus+span.placeholder {
     width: 100%;
     margin-top: 2rem;
 }
-.gener-span-wrapper{
+
+.gener-span-wrapper {
     display: flex;
     /* justify-content: space-between; */
     /* align-items: center; */
@@ -470,20 +506,214 @@ div.input-container input:focus+span.placeholder {
     width: auto;
     gap: 1rem;
 }
-.s-line-icon{
+
+.s-line-icon {
     width: 10%;
     border: .1rem solid blue;
     text-align: center;
     width: auto;
+    font-weight: 700;
+    color: white;
 
 }
-.s-gener-name{
+
+.s-gener-name {
     width: 95%;
     border: .1rem solid greenyellow;
     font-size: 1.4rem;
     width: auto;
+    color: white;
+    font-weight: 600;
 
 }
+
+.content-container-wrapper {
+    width: 92%;
+    border: .2rem solid orange;
+    margin-left: 8%;
+}
+
+.latest-trending {
+    width: 100%;
+    border: .2rem solid greenyellow;
+}
+
+.section-heading {
+    font-size: 2em;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: .04rem;
+
+}
+
+.section-list {
+    width: 100%;
+    height: 26rem;
+    position: relative;
+    margin: 1rem 0 2rem;
+}
+
+.card-container {
+    position: absolute;
+    width: 97%;
+    padding-left: 1rem;
+    height: 24rem;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    position: relative;
+    min-width: 18rem;
+    width: 18rem;
+    height: 28rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin-right: 1.6rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-button {
+    /* position: absolute; */
+    padding: .6rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: .02rem;
+    width: 100%;
+    margin-top: 80%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+.card-section-info {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.card-section-info>span {
+    font-size: 1rem;
+    color: white;
+}
+
+.card-para {
+    font-size: 1.2rem;
+    color: #8F98B2;
+    letter-spacing: .02rem;
+    margin-top: 1rem;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    transition: .5s;
+    padding: 1rem;
+    opacity: 0;
+}
+.pre-btn{
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+}
+
+
+.next-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    
+}
+
+
+.pre-btn {
+    left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+    color: white;
+
+}
+
+.next-btn {
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+    color: white;
+}
+.pre-btn i,
+.next-btn i{
+    width: 1.5rem;
+    height: 2rem;
+    opacity: 0;
+}
+.pre-btn:hover i,
+.next-btn:hover i{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
