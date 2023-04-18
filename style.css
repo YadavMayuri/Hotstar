@@ -374,7 +374,7 @@ div.input-container input:focus+span.placeholder {
     /* border: .2rem solid red; */
     position: absolute;
     padding: 0rem 18rem 5rem 10rem;
-    margin-top: -48rem;
+    margin-top: -40rem;
 }
 
 .video-info-left-side {
@@ -531,6 +531,7 @@ div.input-container input:focus+span.placeholder {
     width: 92%;
     /* border: .2rem solid orange; */
     margin-left: 8%;
+    margin-top: 2%;
 }
 
 .latest-trending {
@@ -562,7 +563,7 @@ div.input-container input:focus+span.placeholder {
     margin: 0 auto;
     padding-left: 1rem;
     align-items: center;
-    overflow-x:auto;
+    overflow-x: auto;
     overflow-y: visible;
     scroll-behavior: smooth;
 
@@ -596,6 +597,7 @@ div.input-container input:focus+span.placeholder {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
 }
 
 .card-button {
@@ -643,8 +645,10 @@ div.input-container input:focus+span.placeholder {
     transition: .5s;
     padding: 1rem;
     opacity: 0;
+
 }
-.pre-btn{
+
+.pre-btn {
     position: absolute;
     top: 0;
     width: 5%;
@@ -667,7 +671,7 @@ div.input-container input:focus+span.placeholder {
     cursor: pointer;
     outline: none;
     font-size: 2rem;
-    
+
 }
 
 
@@ -683,36 +687,91 @@ div.input-container input:focus+span.placeholder {
     background: linear-gradient(to left, #0c111b 0%, #0c111b00);
     color: white;
 }
+
 .pre-btn i,
-.next-btn i{
+.next-btn i {
     width: 1.5rem;
     height: 2rem;
     opacity: 0;
 }
+
 .pre-btn:hover i,
-.next-btn:hover i{
+.next-btn:hover i {
     opacity: 1;
 }
 
 
+/* different---category--section---------------------- */
 
+.different-categories {
+    margin: 1rem 0rem;
+    width: 100%;
+    /* border: .2rem solid orange; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
 
+.d-category {
+    width: 15%;
+    /* border: .1rem solid yellow; */
+    border-radius: 1rem;
+}
 
+.d-category>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
 
+}
 
+/* popular  genres section-------------------------------------- */
 
+.genres-list {
+    width: 100%;
+    height: 17rem;
+    position: relative;
+    margin: 1rem 0 2rem;
+}
 
+.genres-container {
 
+    position: absolute;
+    width: 97%;
+    height: 15rem;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 1rem;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
 
+}
 
+.genres-container::-webkit-scrollbar {
+    display: none;
+}
 
+.genre {
+    position: relative;
+    min-width:25rem;
+    width: 25rem;
+    height: 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin-right: 1.6rem;
+    transition: .5s;
+    cursor: pointer;
+}
+.genre:hover {
+    transform: scale(1.1);
+}
 
+.genre .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
 
-
-
-
-
-
-
-
-
+}
