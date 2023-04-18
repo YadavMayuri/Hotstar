@@ -11,3 +11,64 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 721px){
+    .first-footer{
+        flex-direction: column;
+    }
+    .footer-menus {
+        width: 100%;
+    }
+    
+    .connect-w-us {
+        width: 100%;
+    
+    }
+    
+    .footer-menus-lang {
+        width: 100%;
+    }
+    .second-footer{
+        flex-direction: column;
+    }
+    .t-conditions {
+        width: 100%;
+       
+    }
+    
+    .app-images-container {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+       
+    }
+    .playstore-img {
+        width: 20%;
+    }
+    .appstore-img {
+        width: 20%;
+    }
+    .footer-link-head{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
