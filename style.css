@@ -262,7 +262,7 @@ div.input-container input:focus+span.placeholder {
     text-decoration: none;
 }
 
-.nav-link>a>i:hover {
+.nav-link:hover i{
     color: white;
     width: 100%;
     cursor: pointer;
@@ -376,7 +376,9 @@ div.input-container input:focus+span.placeholder {
     height: 116vh;
     /* border: .2rem solid gold; */
     position: relative;
+
 }
+
 
 .video-info {
     width: 100%;
@@ -543,7 +545,7 @@ div.input-container input:focus+span.placeholder {
     width: 92%;
     /* border: .2rem solid orange; */
     margin-left: 8%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .latest-trending {
@@ -729,6 +731,7 @@ div.input-container input:focus+span.placeholder {
     width: 15%;
     /* border: .1rem solid yellow; */
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .d-category>img {
@@ -931,3 +934,19 @@ div.input-container input:focus+span.placeholder {
     width: 100%;
     height: 100%;
 }
+
+.movies-recommendation > .section-heading>span:nth-child(2){
+    margin-left: 2rem;
+    color: gray;
+    cursor: pointer;
+}
+.movies-recommendation > .section-heading>span{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
