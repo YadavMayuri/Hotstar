@@ -1,6 +1,6 @@
 @media screen and (max-width:1025px) {
     .login-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .left-side-content {
@@ -9,6 +9,13 @@
 
     .right-side-content {
         width: 100%;
+    }
+    .left-side-content {
+        border: none;
+    
+        /* border: .1rem solid blue; */
+        /* background: linear-gradient(269.57deg,rgba(15,16,20,0.95.) 16.24%,rgba(15,16,20,0) 98.46%); */
+        background: linear-gradient(to top, rgba(15, 16, 20, 0.80) 16.24%, rgba(15, 16, 20, 0) 98.46%);
     }
 }
 

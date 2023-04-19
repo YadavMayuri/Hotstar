@@ -53,7 +53,7 @@ html {
 }
 
 .close-btn {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: right;
     padding: 1.6rem 2rem;
     color: white;
@@ -107,7 +107,7 @@ html {
 
 div.input-container {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 div.input-container input {
@@ -159,10 +159,10 @@ div.input-container input:focus+span.placeholder {
 .get-help-line {
     color: #8F98B2;
     font-size: 1.4rem;
-    margin-top: 4rem;
+    /* margin-top: 1rem; */
     text-align: center;
     letter-spacing: .04rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .get-help-line>a {
@@ -173,7 +173,7 @@ div.input-container input:focus+span.placeholder {
 
 .submit-btn {
     display: block;
-    margin: 3rem auto;
+    margin: 2rem auto;
     outline: none;
     border: none;
     background: linear-gradient(to right, #0957e1 0%, #062997 100%);
