@@ -10,60 +10,19 @@
     .right-side-content {
         width: 100%;
     }
+
     .left-side-content {
         border: none;
-    
+
         /* border: .1rem solid blue; */
         /* background: linear-gradient(269.57deg,rgba(15,16,20,0.95.) 16.24%,rgba(15,16,20,0) 98.46%); */
         background: linear-gradient(to top, rgba(15, 16, 20, 0.80) 16.24%, rgba(15, 16, 20, 0) 98.46%);
     }
 }
 
-@media screen and (max-width: 721px){
-    .first-footer{
-        flex-direction: column;
-    }
-    .footer-menus {
-        width: 100%;
-    }
-    
-    .connect-w-us {
-        width: 100%;
-    
-    }
-    
-    .footer-menus-lang {
-        width: 100%;
-    }
-    .second-footer{
-        flex-direction: column;
-    }
-    .t-conditions {
-        width: 100%;
-       
-    }
-    
-    .app-images-container {
-        width: 100%;
-        justify-content: center;
-        margin-top: 1rem;
-       
-    }
-    .playstore-img {
-        width: 20%;
-    }
-    .appstore-img {
-        width: 20%;
-    }
-    .footer-link-head{
-        margin-top: 1rem;
-    }
-}
-
 @media screen and (max-width:1238px) {
     html {
         font-size: 60%;
-
     }
 }
 
@@ -72,31 +31,53 @@
         font-size: 56%;
     }
 }
+
 @media screen and (max-width:1020px) {
     html {
         font-size: 53%;
     }
 }
+
 @media screen and (max-width:991px) {
     html {
         font-size: 50%;
     }
 }
+
+@media screen and (max-width:960px) {
+    html {
+        font-size: 50%;
+    }
+
+    .v-gener {
+        display: none;
+    }
+
+    .video-info {
+        padding: 0rem 10rem 0rem 10rem;
+        margin-top: -35rem;
+
+    }
+}
+
 @media screen and (max-width:920px) {
     html {
         font-size: 48%;
     }
 }
+
 @media screen and (max-width:884px) {
     html {
         font-size: 45%;
     }
 }
+
 @media screen and (max-width:857px) {
     html {
         font-size: 43%;
     }
 }
+
 @media screen and (max-width:793px) {
     html {
         font-size: 40%;
@@ -104,18 +85,125 @@
 }
 
 
+@media screen and (max-width: 721px) {
 
+    .c-m-content-wrap {
+        flex-direction: column;
+    }
 
+    .left-side-cart-section {
+        width: 100%;
+        margin-bottom: 2rem;
 
+    }
 
+    .right-side-cart-section {
+        width: 100%;
+    }
 
+    .hs-c-image {
+        width: 20%;
+        padding: 1rem;
+    }
 
+    .footer {
+        width: 100%;
+        padding: 2rem 3rem 3rem 1rem;
+    }
 
+    .first-footer {
+        flex-direction: column;
+    }
 
+    .footer-menus {
+        width: 100%;
+    }
 
+    .connect-w-us {
+        width: 100%;
 
+    }
 
+    .footer-menus-lang {
+        width: 100%;
+    }
 
+    .second-footer {
+        flex-direction: column;
+    }
 
+    .t-conditions {
+        width: 100%;
 
+    }
 
+    .app-images-container {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+
+    }
+
+    .playstore-img {
+        width: 20%;
+    }
+
+    .appstore-img {
+        width: 20%;
+    }
+
+    .footer-link-head {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 572px){
+    
+    .video-info {
+        padding: 0rem 10rem 0rem 10rem;
+        margin-top: -30rem;
+
+    }
+    .v-season-ep-info {
+        width: 100%;
+      
+    }
+    .v-watch-now-btn {
+        width: 70%;
+    }
+    
+    .v-watchlist-btn {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 486px){
+    .video-info-left-side {
+        width: 66%;
+    }
+    
+    .video-info-right-side {
+        width: 30%;
+    }
+    .video-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        padding: 0rem 7rem 0rem 6rem;
+        margin-top: -30rem;
+    }
+
+}
+@media screen and (max-width: 380px){
+    .video-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        padding: 0rem 7rem 0rem 6rem;
+        margin-top: -25rem;
+    }
+}
