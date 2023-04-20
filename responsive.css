@@ -60,8 +60,48 @@
     }
 }
 
+@media screen and (max-width:1238px) {
+    html {
+        font-size: 60%;
 
+    }
+}
 
+@media screen and (max-width:1101px) {
+    html {
+        font-size: 56%;
+    }
+}
+@media screen and (max-width:1020px) {
+    html {
+        font-size: 53%;
+    }
+}
+@media screen and (max-width:991px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media screen and (max-width:920px) {
+    html {
+        font-size: 48%;
+    }
+}
+@media screen and (max-width:884px) {
+    html {
+        font-size: 45%;
+    }
+}
+@media screen and (max-width:857px) {
+    html {
+        font-size: 43%;
+    }
+}
+@media screen and (max-width:793px) {
+    html {
+        font-size: 40%;
+    }
+}
 
 
 
