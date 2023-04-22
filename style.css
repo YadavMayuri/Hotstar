@@ -12,7 +12,9 @@ html {
 .body {
     background-color: black;
 }
-
+#screen{
+    background-color: black;
+}
 .login-container {
     width: 65%;
     margin: 10rem auto;
