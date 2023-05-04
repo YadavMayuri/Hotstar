@@ -109,7 +109,7 @@ function login(event) {
 
 function logout() {
     alert("Logout successful.")
-    localStorage.removeItem("TanishqCurrentUser")
+    localStorage.removeItem("hotstarCurrentUser")
     window.location.reload()
 
 
