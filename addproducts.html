@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+ Hotstar - Watch TV Shows, Movies, Specials, Live Cricket & Football</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="https://kit.fontawesome.com/174a9c1444.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Seller Page</h1>
+    <form onsubmit="addProduct(event)">
+       
+        <label>Product Image url</label><br />
+        <input type="text" id="pimage" /><br />
+        <input type="submit" /><br />
+    </form>
+    <script>
+        function addProduct(event) {
+            event.preventDefault();
+            // alert("Product adding....")
+          
+            var proImage = document.getElementById("pimage").value;
+            var product = {  proImage };
+
+            var LS = JSON.parse(localStorage.getItem("hotstarProducts")) || [];
+            LS.push(product);
+            localStorage.setItem("hotstarProducts", JSON.stringify(LS));
+
+            alert("Product Added Successfully.")
+        }
+    </script>
+</body>
+</html>

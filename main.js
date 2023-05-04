@@ -107,6 +107,15 @@ function login(event) {
 
 
 
+function logout() {
+    alert("Logout successful.")
+    localStorage.removeItem("TanishqCurrentUser")
+    window.location.reload()
+
+
+}
+
+
 
 
 
