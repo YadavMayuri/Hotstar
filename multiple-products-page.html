@@ -21,7 +21,7 @@
             /* padding: 1rem; */
         }
 
-        #products>div{
+        #products>div {
             width: 15%;
             border: 1px solid lightgray;
             /* text-align: center; */
@@ -44,13 +44,15 @@
             font-size: 1.4rem;
 
         }
-        .logout-button-txt{
+
+        .logout-button-txt {
             background: transparent;
             border: none;
             outline: none;
             cursor: pointer;
         }
-        .logout-button-txt i{
+
+        .logout-button-txt i {
             font-size: 1.6rem;
             color: gray;
         }
@@ -106,7 +108,7 @@
                         </a>
                     </div>
                     <div class="nav-link" id="logout">
-                        
+
                     </div>
 
                 </div>
@@ -227,52 +229,52 @@
 
     <script>
         window.onload = function () {
-         // alert("working")
+            // alert("working")
 
-         var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
-         // console.log(currentUser,"current user");
-         if (!!currentUser) {
-             // alert(currenUser,"username")
-             var logoutDiv = document.getElementById("logout")
-             var divfromHtml = document.getElementById("switch");
-             // console.log(divfromHtml, "divfromhtml");
-             // var h1=document.createElement("h1");
-             // h1.innerText="Mayuri"
-             // divfromHtml.append(h1)
+            var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+            // console.log(currentUser,"current user");
+            if (!!currentUser) {
+                // alert(currenUser,"username")
+                var logoutDiv = document.getElementById("logout")
+                var divfromHtml = document.getElementById("switch");
+                // console.log(divfromHtml, "divfromhtml");
+                // var h1=document.createElement("h1");
+                // h1.innerText="Mayuri"
+                // divfromHtml.append(h1)
 
-             var button = '<span class="lgbtn-wrap"> <button onclick="logout() " class="logout-button-txt"><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i></button></span>'
-             var name = `<div>${currentUser.userName}</div>`;
-           divfromHtml.innerHTML = name;
-             logoutDiv.innerHTML = button;
-             // logoutDiv.innerHTML = icon
-         }
-         // else {
-         //     alert("current user absent")
-         // }
-
-      
-           var divToShowProducts = document.getElementById("products");
-             var finalData = "";
-
-             var productsFromLS = JSON.parse(localStorage.getItem("hotstarProducts"))
-             for (var i = 0; i < productsFromLS.length; i++) {
-                 finalData += `<div onclick='redirect(${JSON.stringify(productsFromLS[i])})' id='singlePro'><img src=${productsFromLS[i].proImage} /></div>`;
-             }
-
-              console.log(finalData, "finalData here")
-
-             divToShowProducts.innerHTML = finalData;
-
-     }
-     function logout() {
-             alert("Logout successful.")
-             localStorage.removeItem("hotstarCurrentUser")
-             window.location.reload()
+                var button = '<span class="lgbtn-wrap"> <button onclick="logout() " class="logout-button-txt"><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i></button></span>'
+                var name = `<div>${currentUser.userName}</div>`;
+                divfromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
+                // logoutDiv.innerHTML = icon
+            }
+            // else {
+            //     alert("current user absent")
+            // }
 
 
-         }
+            var divToShowProducts = document.getElementById("products");
+            var finalData = "";
 
- </script>
+            var productsFromLS = JSON.parse(localStorage.getItem("hotstarProducts"))
+            for (var i = 0; i < productsFromLS.length; i++) {
+                finalData += `<div onclick='redirect(${JSON.stringify(productsFromLS[i])})' id='singlePro'><img src=${productsFromLS[i].proImage} /></div>`;
+            }
+
+            console.log(finalData, "finalData here")
+
+            divToShowProducts.innerHTML = finalData;
+
+        }
+        function logout() {
+            alert("Logout successful.")
+            localStorage.removeItem("hotstarCurrentUser")
+            window.location.reload()
+
+
+        }
+
+    </script>
 
 
 </body>
