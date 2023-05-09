@@ -44,6 +44,16 @@
             font-size: 1.4rem;
 
         }
+        .logout-button-txt{
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .logout-button-txt i{
+            font-size: 1.6rem;
+            color: gray;
+        }
     </style>
 </head>
 
@@ -62,10 +72,12 @@
                 </div>
                 <div class="navbar">
                     <div class="nav-link">
-                        <a href="">
+                        <a href="./register.html">
                             <div class="my-space-img">
                                 <img src="./images/my-space.webp" alt="">
                             </div>
+                            <div id="switch"></div>
+
                         </a>
                     </div>
                     <div class="nav-link">
@@ -92,6 +104,9 @@
                         <a href="">
                             <i class="fa-solid fa-baseball"></i>
                         </a>
+                    </div>
+                    <div class="nav-link" id="logout">
+                        
                     </div>
 
                 </div>
@@ -211,55 +226,41 @@
     <script src="./main.js"></script>
 
     <script>
-
         window.onload = function () {
-            // alert("working")
+         // alert("working")
 
-            var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
-            // console.log(currentUser,"current user");
-            if (!!currentUser) {
-                // alert(currenUser,"username")
-                var logoutDiv = document.getElementById("logout")
-                var divfromHtml = document.getElementById("switch");
-                // console.log(divfromHtml, "divfromhtml");
-                // var h1=document.createElement("h1");
-                // h1.innerText="Mayuri"
-                // divfromHtml.append(h1)
+         var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+         // console.log(currentUser,"current user");
+         if (!!currentUser) {
+             // alert(currenUser,"username")
+             var logoutDiv = document.getElementById("logout")
+             var divfromHtml = document.getElementById("switch");
+             // console.log(divfromHtml, "divfromhtml");
+             // var h1=document.createElement("h1");
+             // h1.innerText="Mayuri"
+             // divfromHtml.append(h1)
 
-                var button = '<span class="lgbtn-wrap"><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i> <button onclick="logout()" class="logout-button-txt">Logout</button></span>'
-                var name = `<div>${currentUser.userName}</div>`;
-                divfromHtml.innerHTML = name;
-                logoutDiv.innerHTML = button;
-                // logoutDiv.innerHTML = icon
-            }
-            // else {
-            //     alert("current user absent")
-            // }
+             var button = '<span class="lgbtn-wrap"> <button onclick="logout() " class="logout-button-txt"><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i></button></span>'
+             var name = `<div>${currentUser.userName}</div>`;
+           divfromHtml.innerHTML = name;
+             logoutDiv.innerHTML = button;
+             // logoutDiv.innerHTML = icon
+         }
+         // else {
+         //     alert("current user absent")
+         // }
 
-
-
-            var divToShowProducts = document.getElementById("products");
-            var finalData = "";
-
-            var productsFromLS = JSON.parse(localStorage.getItem("hotstarProducts"))
-            for (var i = 0; i < productsFromLS.length; i++) {
-                finalData += `<a href="./single-product.html"><div id='singlePro'><img src=${productsFromLS[i].proImage} /></div></a>`;
-            }
-
-            // console.log(finalData, "finalData here")
-
-            divToShowProducts.innerHTML = finalData;
-        }
-        function logout() {
-            alert("Logout successful.")
-            localStorage.removeItem("hotstarCurrentUser")
-            window.location.reload()
+      
+     }
+     function logout() {
+             alert("Logout successful.")
+             localStorage.removeItem("hotstarCurrentUser")
+             window.location.reload()
 
 
-        }
+         }
 
-
-    </script>
+ </script>
 
 
 </body>
