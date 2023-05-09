@@ -21,7 +21,7 @@
             /* padding: 1rem; */
         }
 
-        #products>a {
+        #products>div{
             width: 15%;
             border: 1px solid lightgray;
             /* text-align: center; */
@@ -29,9 +29,9 @@
             color: black;
         }
 
-        #products>a>div>img {
+        #products>div>img {
             width: 100%;
-            height: 20rem;
+            height: 100%;
         }
 
         .mpp-pro-name {
@@ -251,6 +251,18 @@
          // }
 
       
+           var divToShowProducts = document.getElementById("products");
+             var finalData = "";
+
+             var productsFromLS = JSON.parse(localStorage.getItem("hotstarProducts"))
+             for (var i = 0; i < productsFromLS.length; i++) {
+                 finalData += `<div onclick='redirect(${JSON.stringify(productsFromLS[i])})' id='singlePro'><img src=${productsFromLS[i].proImage} /></div>`;
+             }
+
+              console.log(finalData, "finalData here")
+
+             divToShowProducts.innerHTML = finalData;
+
      }
      function logout() {
              alert("Logout successful.")
