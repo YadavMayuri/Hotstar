@@ -10,6 +10,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./responsive.css">
     <script src="https://kit.fontawesome.com/174a9c1444.js" crossorigin="anonymous"></script>
+    <style>
+        #singlePro {
+            width: 100%;
+            height: 80vh;
+        }
+
+        #singlePro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logout-button-txt {
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .logout-button-txt i {
+            font-size: 1.6rem;
+            color: gray;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,14 +45,17 @@
                     <img src="https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg" alt="">
                 </div>
                 <div class="subscribe-btn">
-                    <a href=""> Subscribe <i class="fa-solid fa-angle-right"></i></a>
+                    <a href=""> Subscribe </a>
+                    <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="navbar">
                     <div class="nav-link">
-                        <a href="">
+                        <a href="./register.html">
                             <div class="my-space-img">
                                 <img src="./images/my-space.webp" alt="">
                             </div>
+                            <div id="switch"></div>
+
                         </a>
                     </div>
                     <div class="nav-link">
@@ -57,6 +83,9 @@
                             <i class="fa-solid fa-baseball"></i>
                         </a>
                     </div>
+                    <div class="nav-link" id="logout">
+
+                    </div>
 
                 </div>
 
@@ -66,10 +95,10 @@
 
             <div class="right-main-content">
 
-                <div class="right-second-video">
+                <div class="right-second-video" id="singleProduct">
                     <div class="video">
-                        <video src="./images/Hotstar Specials The Legend of Hanuman Season 2 _ Official Trailer.mp4"
-                            width="100%" height="100%" controls autoplay></video>
+                        <!-- <video src="./images/Hotstar Specials The Legend of Hanuman Season 2 _ Official Trailer.mp4"
+                            width="100%" height="100%" controls autoplay></video> -->
 
                         <div class="video-info">
                             <div class="video-info-left-side">
@@ -112,10 +141,10 @@
                                 <!-- div - a- button- span - span -->
                                 <div class="v-left-bottom">
                                     <div class="v-watch-now-btn">
-                                        <a href="./cart.html">
+                                        <a id="forAddToCart">
                                             <button>
                                                 <span><i class="fa-solid fa-play"></i> </span>
-                                                <span>Watch Now</span>
+                                                <span>Add To Cart</span>
                                             </button>
                                         </a>
                                     </div>
@@ -146,7 +175,7 @@
                         <div class="section-heading">
                             <span>More like this</span>
                             <span>Trailers & more</span>
-                           
+
                         </div>
 
                         <div class="section-list">
@@ -539,8 +568,172 @@
     </div>
 
 
+    <script>
+        window.onload = function () {
+            // alert("working")
+
+            var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+            // console.log(currentUser,"current user");
+            if (!!currentUser) {
+                // alert(currenUser,"username")
+                var logoutDiv = document.getElementById("logout")
+                var divfromHtml = document.getElementById("switch");
+                // console.log(divfromHtml, "divfromhtml");
+                // var h1=document.createElement("h1");
+                // h1.innerText="Mayuri"
+                // divfromHtml.append(h1)
+
+                var button = '<span class="lgbtn-wrap"> <button onclick="logout() " class="logout-button-txt"><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i></button></span>'
+                var name = `<div>${currentUser.userName}</div>`;
+                divfromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
+                // logoutDiv.innerHTML = icon
+            }
+            // else {
+            //     alert("current user absent")
+            // }
+
+
+          
+
+
+            var product = JSON.parse(localStorage.getItem("hotstar-current-product"));
+
+            var divToAppendProduct = document.getElementById("singleProduct");
+            // var divToAppendProductName = document.getElementById("singleProductName");
+            // var divToAppendProductPrice = document.getElementById("total-price");
+            var divForAddToCart = document.getElementById("forAddToCart");
+
+
+            // var structure = `<div id='singlePro'> <img src='${product.proImage}' class="got-image" />
+            //               </div>`
+
+            // var productName = `<div> ${product.proName}</div>`
+            // var productPrice = `<span> ${product.proPrice}</span>`
+            // var addToCart = `<span><i class="fa-solid fa-play"></i></span>
+            //     <span ><button onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</button></span>`
+
+            var addToCart = "";
+
+            var structure = ` <div class="right-second-video" id="singleProduct">
+                    <div class="video">
+                        <div id='singlePro'> <img src='${product.proImage}' class="got-image" />
+                           </div>
+
+                        <div class="video-info">
+                            <div class="video-info-left-side">
+                                <div class="v-left-top">
+                                    <div class="video-name-img">
+                                        <img src="./images/v1.webp" alt="">
+                                    </div>
+                                    <div class="v-season-ep-info">
+                                        <span>2021</span>
+                                        <span>.</span>
+                                        <span>2 Seasons</span>
+                                        <span>.</span>
+                                        <span>hindi</span>
+                                        <span>.</span>
+                                        <span class="restriction">U/A 7+</span>
+                                    </div>
+                                    <div class="v-gener">
+                                        <span class="gener-span-wrapper">
+                                            <!-- <span class="s-line-icon">|</span> -->
+                                            <span class="s-gener-name">Mythology</span>
+                                        </span>
+                                        <span class="gener-span-wrapper">
+                                            <span class="s-line-icon">|</span>
+                                            <span class="s-gener-name">Animation</span>
+                                        </span>
+                                        <span class="gener-span-wrapper">
+                                            <span class="s-line-icon">|</span>
+                                            <span class="s-gener-name">Creatures & Monsters</span>
+                                        </span>
+                                        <span class="gener-span-wrapper">
+                                            <span class="s-line-icon">|</span>
+                                            <span class="s-gener-name">Fantasy</span>
+                                        </span>
+
+
+
+                                    </div>
+
+                                </div>
+                                <!-- div - a- button- span - span -->
+                                <div class="v-left-bottom">
+                                    <div class="v-watch-now-btn">
+                                        <a>
+                                            <button  onclick='addCart(${JSON.stringify(product)})'>
+                                                <span><i class="fa-solid fa-play"></i> </span>
+                                                <span>Add To Cart</span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="v-watchlist-btn">
+                                        <button>
+                                            <span><i class="fa-solid fa-plus"></i></span>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="video-info-right-side">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div> `
+
+
+            console.log(structure, "here");
+            divToAppendProduct.innerHTML = structure;
+            // divToAppendProductName.innerHTML = productName;
+            // divToAppendProductPrice.innerHTML = productPrice;
+            divForAddToCart.innerHTML = addToCart;
+
+
+
+
+        }
+
+        function addCart(product) {
+            // alert("Adding to cart")
+            var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+            // console.log(currentUser.email);
+            var userData = JSON.parse(localStorage.getItem("Users"))
+            var flafForUser = false;
+            for (var i = 0; i < userData.length; i++) {
+                if (currentUser.userEmail === userData[i].userEmail) {
+                    // alert("got")
+                    if (userData[i].cartProducts == undefined) {
+                        userData[i].cartProducts = [product];
+                    } else {
+                        userData[i].cartProducts.push(product)
+                    }
+                    alert("Product added to cart.")
+                    window.location.href = './cart-1.html'
+                }
+            }
+            localStorage.setItem("Users", JSON.stringify(userData))
+        }
+
+
+
+
+
+        function logout() {
+            alert("Logout successful.")
+            localStorage.removeItem("hotstarCurrentUser")
+            window.location.reload()
+
+
+        }
+
+    </script>
 
     <script src="./main.js"></script>
+
 </body>
 
 </html>
