@@ -13,7 +13,7 @@
     <style>
         #singlePro {
             width: 100%;
-            height: 80vh;
+            height: 100%;
         }
 
         #singlePro img {
@@ -21,6 +21,7 @@
             height: 100%;
             object-fit: cover;
         }
+
         .logout-button-txt {
             background: transparent;
             border: none;
@@ -35,24 +36,20 @@
     </style>
 </head>
 
-<body >
+<body>
 
-    <div id="screen">
+    <div id="single-product-screen">
 
         <div class="single-page-container">
             <div class="left-side-navbar">
                 <div class="hotstar-logo-wrapper">
                     <img src="https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg" alt="">
                 </div>
-                <div class="subscribe-btn">
-                    <a href=""> Subscribe </a>
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
                 <div class="navbar">
                     <div class="nav-link">
                         <a href="./register.html">
                             <i class="fa-regular fa-user"></i>
-                            <div id="switch"></div>
+                            <div id="switch">User</div>
 
                         </a>
                     </div>
@@ -63,7 +60,7 @@
                         </a>
                     </div>
                     <div class="nav-link">
-                        <a href="">
+                        <a href="./multiple-products-page.html">
                             <i class="fa-solid fa-house"></i>
                             <div>Home</div>
 
@@ -109,38 +106,22 @@
                         <div class="video-info">
                             <div class="video-info-left-side">
                                 <div class="v-left-top">
-                                    <div class="video-name-img">
-                                        <img src="./images/v1.webp" alt="">
+                                    <div class="video-name-img" id="">
+                                      
                                     </div>
                                     <div class="v-season-ep-info">
-                                        <span>2021</span>
-                                        <span>.</span>
-                                        <span>2 Seasons</span>
-                                        <span>.</span>
                                         <span>hindi</span>
                                         <span>.</span>
                                         <span class="restriction">U/A 7+</span>
                                     </div>
+                                    <div class="v-series-desc" >
+
+                                    </div>
                                     <div class="v-gener">
                                         <span class="gener-span-wrapper">
-                                            <!-- <span class="s-line-icon">|</span> -->
-                                            <span class="s-gener-name">Mythology</span>
+                                            <p class="s-gener-name"> </p>
                                         </span>
-                                        <span class="gener-span-wrapper">
-                                            <span class="s-line-icon">|</span>
-                                            <span class="s-gener-name">Animation</span>
-                                        </span>
-                                        <span class="gener-span-wrapper">
-                                            <span class="s-line-icon">|</span>
-                                            <span class="s-gener-name">Creatures & Monsters</span>
-                                        </span>
-                                        <span class="gener-span-wrapper">
-                                            <span class="s-line-icon">|</span>
-                                            <span class="s-gener-name">Fantasy</span>
-                                        </span>
-
-
-
+                                      
                                     </div>
 
                                 </div>
@@ -178,7 +159,7 @@
                     <!-- forth section-------movies recommended for you----------------------------------------- -->
 
                     <div class="movies-recommendation">
-                        <div class="section-heading">
+                        <div class="section-continue-heading">
                             <span>More like this</span>
                             <span>Trailers & more</span>
 
@@ -600,7 +581,7 @@
             // }
 
 
-          
+
 
 
             var product = JSON.parse(localStorage.getItem("hotstar-current-product"));
@@ -623,44 +604,27 @@
 
             var structure = ` <div class="right-second-video" id="singleProduct">
                     <div class="video">
-                        <div id='singlePro'> <img src='${product.proImage}' class="got-image" />
-                           </div>
+                         <img src='${product.proImage}' />
+                           
 
                         <div class="video-info">
                             <div class="video-info-left-side">
                                 <div class="v-left-top">
                                     <div class="video-name-img">
-                                        <img src="./images/v1.webp" alt="">
+                                        <p>${product.proname}</p>
                                     </div>
                                     <div class="v-season-ep-info">
-                                        <span>2021</span>
-                                        <span>.</span>
-                                        <span>2 Seasons</span>
-                                        <span>.</span>
-                                        <span>hindi</span>
+                                        <span>Hindi</span>
                                         <span>.</span>
                                         <span class="restriction">U/A 7+</span>
                                     </div>
+                                     <div class="v-series-desc"  >${product.prodesc} </div>
+
                                     <div class="v-gener">
                                         <span class="gener-span-wrapper">
-                                            <!-- <span class="s-line-icon">|</span> -->
-                                            <span class="s-gener-name">Mythology</span>
+                                            <p class="s-gener-name">${product.progener} </p>
                                         </span>
-                                        <span class="gener-span-wrapper">
-                                            <span class="s-line-icon">|</span>
-                                            <span class="s-gener-name">Animation</span>
-                                        </span>
-                                        <span class="gener-span-wrapper">
-                                            <span class="s-line-icon">|</span>
-                                            <span class="s-gener-name">Creatures & Monsters</span>
-                                        </span>
-                                        <span class="gener-span-wrapper">
-                                            <span class="s-line-icon">|</span>
-                                            <span class="s-gener-name">Fantasy</span>
-                                        </span>
-
-
-
+                                      
                                     </div>
 
                                 </div>

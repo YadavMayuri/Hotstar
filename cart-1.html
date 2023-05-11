@@ -43,15 +43,11 @@
                 <div class="hotstar-logo-wrapper">
                     <img src="https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg" alt="">
                 </div>
-                <div class="subscribe-btn">
-                    <a href=""> Subscribe </a>
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
                 <div class="navbar">
                     <div class="nav-link">
                         <a href="./register.html">
                             <i class="fa-regular fa-user"></i>
-                            <div id="switch"></div>
+                            <div id="switch">User</div>
 
                         </a>
                     </div>
@@ -62,7 +58,7 @@
                         </a>
                     </div>
                     <div class="nav-link">
-                        <a href="">
+                        <a href="./multiple-products-page.html">
                             <i class="fa-solid fa-house"></i>
                             <div>Home</div>
 
@@ -110,13 +106,13 @@
                                     <!-- <img src="./images/cart-img/img1.jpg" alt=""> -->
                                 </div>
                                 <div class="hs-c-description">
-                                    <h3 class="hs-movie-name">Avengers Endgame (2019)</h3>
+                                    <h3 class="hs-movie-name"></h3>
                                     <div class="cart-price-wrapper">
-                                        <span class="strike-price">₹599</span>
-                                        <span class="c-actual-price">₹499</span>
+                                        <span class="c-actual-price"></span>
                                         <span class="c-offer-percent">10% Off</span>
                                         <span class="c-offer-txt">offer applied</span>
                                     </div>
+                                    <div class="cart-gener-info"> </div>
                                     <div class="c-customize-btns">
                                         <button class="save-btn">Save for later</button>
                                         <button class="c-remove-btn">Remove</button>
@@ -296,18 +292,18 @@
 
             finalProductCart += `
                        
-                            <div class="hs-content-wrap">
+                            <div class="hs-content-wrap" >
                                 <div class="hs-c-image" id="productImage">
                                      <img src='${products[i].proImage}' alt="">
                                 </div>
                                 <div class="hs-c-description">
-                                    <h3 class="hs-movie-name">Avengers Endgame (2019)</h3>
+                                    <h3 class="hs-movie-name">${products[i].proname} </h3>
                                     <div class="cart-price-wrapper">
-                                        <span class="strike-price">₹599</span>
-                                        <span class="c-actual-price">₹499</span>
+                                        <span class="c-actual-price">₹${products[i].proprice}</span>
                                         <span class="c-offer-percent">10% Off</span>
                                         <span class="c-offer-txt">offer applied</span>
                                     </div>
+                                    <div class="cart-gener-info">${products[i].progener}</div>
                                     <div class="c-customize-btns">
                                         <button class="save-btn">Save for later</button>
                                         <button class="c-remove-btn">Remove</button>
