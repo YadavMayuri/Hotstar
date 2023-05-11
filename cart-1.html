@@ -50,9 +50,7 @@
                 <div class="navbar">
                     <div class="nav-link">
                         <a href="./register.html">
-                            <div class="my-space-img">
-                                <img src="./images/my-space.webp" alt="">
-                            </div>
+                            <i class="fa-regular fa-user"></i>
                             <div id="switch"></div>
 
                         </a>
@@ -60,26 +58,34 @@
                     <div class="nav-link">
                         <a href="">
                             <i class="fa-solid fa-magnifying-glass"></i>
+                            <div>Search</div>
                         </a>
                     </div>
                     <div class="nav-link">
                         <a href="">
                             <i class="fa-solid fa-house"></i>
+                            <div>Home</div>
+
                         </a>
                     </div>
                     <div class="nav-link">
                         <a href="">
                             <i class="fa-solid fa-tv"></i>
+                            <div>TV</div>
+
                         </a>
                     </div>
                     <div class="nav-link">
                         <a href="">
                             <i class="fa-solid fa-film"></i>
+                            <div>Movies</div>
+
                         </a>
                     </div>
                     <div class="nav-link">
                         <a href="">
                             <i class="fa-solid fa-baseball"></i>
+                            <div>Sports</div>
                         </a>
                     </div>
                     <div class="nav-link" id="logout">
@@ -246,8 +252,8 @@
                 // h1.innerText="Mayuri"
                 // divfromHtml.append(h1)
 
-                var button = '<span class="lgbtn-wrap"> <button onclick="logout() " class="logout-button-txt"><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i></button></span>'
-                var name = `<div>${currentUser.userName}</div>`;
+                var button = '<a ><i class="fa-solid fa-arrow-right-from-bracket id=logout-icon"></i><div onclick="logout() " class="logout-button-txt">Logout</div></a>'
+                var name = `${currentUser.userName}`;
                 divfromHtml.innerHTML = name;
                 logoutDiv.innerHTML = button;
                 // logoutDiv.innerHTML = icon

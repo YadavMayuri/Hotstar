@@ -211,16 +211,20 @@ div.input-container input:focus+span.placeholder {
 }
 
 .left-side-navbar {
-    width: 8%;
+    width: 10%;
     /* border: .1rem solid blue; */
     background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
+    height: 100vh;
 
 }
+.left-side-navbar:hover{
+    background: linear-gradient(to right, #000 0%, #00000000 100%); 
 
+}
 .right-main-content {
     width: 100%;
     /* border: .1rem solid green; */
@@ -229,8 +233,8 @@ div.input-container input:focus+span.placeholder {
 }
 
 .hotstar-logo-wrapper {
-    width: 60%;
-    margin: 2rem auto 1rem auto;
+    width: 40%;
+    margin: 2rem ;
 }
 
 .hotstar-logo-wrapper>img {
@@ -240,9 +244,9 @@ div.input-container input:focus+span.placeholder {
 
 .subscribe-btn {
     border: .1rem solid #ccb371;
-    width: 78%;
+    width: 60%;
     padding: .6rem;
-    margin: 2rem auto;
+    margin: 2rem ;
     text-align: center;
     border-radius: 1.4rem;
     background-color: #27231e;
@@ -266,10 +270,18 @@ div.input-container input:focus+span.placeholder {
     display: flex;
     flex-direction: column;
     /* border: .1rem solid gray; */
+    /* background: linear-gradient(to right, #0c111b 0%, #0c111b00);  */
+    height: 100%;
+
+}
+
+.navbar:hover div{
+    opacity: 1;
+
 }
 
 .nav-link {
-    width: 70%;
+    width: 100%;
     margin: 1rem auto 3rem auto;
     /* border: .1rem solid olive; */
     text-align: center;
@@ -277,19 +289,40 @@ div.input-container input:focus+span.placeholder {
 }
 
 .nav-link>a {
+    width: 100%;
     font-size: 1.6rem;
     color: #949496;
     text-decoration: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    /* border: .1rem solid red; */
 }
+.nav-link a i{
+    width: 20%;
+}
+.nav-link a div{
+    width: 50%;
+    opacity: 0;
 
-.nav-link:hover i {
+}
+.nav-link  :hover{
+    transition: all .1s ease-out;
+}
+.nav-link:hover a i {
     color: white;
-    width: 100%;
     cursor: pointer;
-    transform: scale(1.3);
-    transition: .3s;
-}
+    transform: scale(1.1);
 
+}
+.nav-link:hover a  div{
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
 .my-space-img {
     width: 30%;
     height: 30%;
@@ -412,6 +445,10 @@ div.input-container input:focus+span.placeholder {
     position: absolute;
     padding: 0rem 10rem 5rem 10rem;
     margin-top: -40rem;
+    /* background: linear-gradient(to right, #0c111b 0%, #0c111b00);  */
+    /* background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #050505 90%); */
+
+
 }
 
 .video-info-left-side {
@@ -671,13 +708,21 @@ div.input-container input:focus+span.placeholder {
 .card-section-info>span {
     font-size: 1rem;
     color: white;
+   
 }
-
+.gener-info{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .card-para {
     font-size: 1.2rem;
     color: #8F98B2;
     letter-spacing: .02rem;
     margin-top: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-body {
@@ -685,11 +730,12 @@ div.input-container input:focus+span.placeholder {
     height: 100%;
     position: absolute;
     top: 0;
+    /* bottom: 0; */
     left: 0;
     z-index: 2;
     background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
     transition: .5s;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     opacity: 0;
 
 }
@@ -705,7 +751,7 @@ div.input-container input:focus+span.placeholder {
     outline: none;
     font-size: 2rem;
     left: 0;
-    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00); 
     color: white;
 }
 

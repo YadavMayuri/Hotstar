@@ -15,8 +15,13 @@
     <form onsubmit="addProduct(event)">
        
         <label>Product Image url</label><br />
-        <input type="text" id="pimage" /><br />
+        <input type="text" id="pimage" placeholder="img-url"/><br />
+        <input type="text" id="pname" placeholder="name"><br>
+        <input type="number" id="pprice" placeholder="price"><br>
+        <input type="text" id="pdecs" placeholder="decs"><br>
+        <input type="text" id="pgener" placeholder="gener"><br>
         <input type="submit" /><br />
+
     </form>
     <script>
         function addProduct(event) {
@@ -24,13 +29,25 @@
             // alert("Product adding....")
           
             var proImage = document.getElementById("pimage").value;
-            var product = {  proImage };
+            var proname = document.getElementById("pname").value;
+            var proprice = document.getElementById("pprice").value;
+            var prodesc = document.getElementById("pdecs").value;
+            var progener = document.getElementById("pgener").value;
+
+            var product = {  proImage, proname, proprice, prodesc, progener };
 
             var LS = JSON.parse(localStorage.getItem("hotstarProducts")) || [];
             LS.push(product);
             localStorage.setItem("hotstarProducts", JSON.stringify(LS));
 
             alert("Product Added Successfully.")
+
+            document.getElementById("pimage").value=""
+            document.getElementById("pname").value=""
+            document.getElementById("pprice").value=""
+            document.getElementById("pdecs").value=""
+            document.getElementById("pgener").value=""
+
         }
     </script>
 </body>
