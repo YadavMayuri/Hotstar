@@ -741,6 +741,11 @@ div.input-container input:focus+span.placeholder {
     color: white;
    
 }
+.gener-actual{
+    font-size: 1rem;
+    color: white;
+    margin-top: .5rem;
+}
 .gener-info{
     white-space: nowrap;
     overflow: hidden;
@@ -750,7 +755,7 @@ div.input-container input:focus+span.placeholder {
     font-size: 1.2rem;
     color: #8F98B2;
     letter-spacing: .02rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
